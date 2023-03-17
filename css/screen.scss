@@ -118,7 +118,6 @@ $ms8: calc($ms7 * $ratio); // 46px
 $ms9: calc($ms8 * $ratio); // 52px
 $ms10: calc($ms9 * $ratio); // 58px
 $ms11: calc($ms10 * $ratio); // 66px
-
 $font-family-primary: "Helvetica Neue", Helvetica, arial, sans-serif;
 $font-family-secondary: "Times New Roman", Times, serif;
 
@@ -159,6 +158,8 @@ $breakpoints: (
 *:before,
 *:after {
   // Reset box-sizing
+  box-sizing: border-box; //zorgt ervoor dat padding en border mee worden gerekent 
+  
 }
 
 * {
@@ -171,7 +172,9 @@ $breakpoints: (
 
 img {
   // make images block level elements
+  display: block;
   // make images responsive
+  max-width: 100%;
 }
 
 /*---------------------------------------/*
